@@ -10,10 +10,10 @@ phases:
     commands:
       - npm run build
 
-  artifacts:
-    files:
-      - build/**/*
-    discard-paths: yes
+artifacts:
+  files:
+    - build/**/*
+  discard-paths: yes
   #build:
     #commands:
       #- aws s3 sync build/ s3://<your-bucket-name> --delete
