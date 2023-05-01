@@ -6,6 +6,12 @@ pipeline {
         AWS_REGION = 'ap-southeast-1'
     }
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
         stage('Build') {
             steps {
                 sh 'npm install'
